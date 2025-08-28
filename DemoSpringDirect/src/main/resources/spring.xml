@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="dev" class="com.prajwal.Dev" autowire="byName">-->
+    <bean id="dev" class="com.prajwal.Dev" autowire="byType">
+        <!-- <property name="age" value="26"/> <!-/-injecting value to dev-age property using <property> tag for setter injection-->
+<!--        <constructor-arg name="age" value="26"/> &lt;!&ndash;injecting value to dev-age constructor-arg using <constructor-arg> tag for constructor injection&ndash;&gt;-->
+        <!--<property name="laptop" ref="lap1"/>--> <!-- injecting ref in dev class using setter method-->
+<!--        <constructor-arg name="laptop" ref="lap1"/> &lt;!&ndash; injecting ref in dev class using constructor method&ndash;&gt;-->
+    </bean>
+<!--    <bean id="dev1" class="com.prajwal.Dev">-->
+    <!--
+    Spring creates 2 dev class object dev1 as configured in spring.xml
+    only runs the constructor and not build as the object is not assigned to any local var/ref
+    -->
+<!--    </bean>-->
+<!--
+        <bean id="lap1" class="com.prajwal.Laptop">
+        </bean>
+-->
+    <!--
+        <bean id="desk1" class="com.prajwal.Desktop">
+        </bean>
+-->
+    <bean id="com" class="com.prajwal.Laptop" primary="true">
+    </bean>
+<!--    <bean id="com1" class="com.prajwal.Desktop" primary="true">-->
+<!--    </bean>-->
+    <bean id="com1" class="com.prajwal.Desktop">
+    </bean>
+</beans>
