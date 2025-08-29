@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
     @RequestMapping("/login")
-    public String login(){
+    public String login(//data from client to server in args){
         System.out.println("called login()");
         return "Login page.";
     }
