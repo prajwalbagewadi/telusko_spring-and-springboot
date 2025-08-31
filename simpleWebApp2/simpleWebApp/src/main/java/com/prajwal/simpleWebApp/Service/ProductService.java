@@ -11,7 +11,7 @@ import java.util.List;
 public class ProductService {
 
     List<Product> products = Arrays.asList(
-            new Product(101,"Bread",50.00),
+            new Product(101,"Bread",50.00), //error Expected no arguments but found 3
             new Product(102,"Eggs",45.00),
             new Product(103,"Jam",20.00)
     );

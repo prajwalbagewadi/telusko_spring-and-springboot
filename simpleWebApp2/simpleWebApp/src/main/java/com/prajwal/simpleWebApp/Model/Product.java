@@ -5,7 +5,7 @@ import lombok.Data;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
-//@Data //will give you lombok functionality
+@Data //will give you lombok functionality
 /*
 Specifically, @Data generates for your class:
 @Getter → generates getters for all fields.
@@ -14,7 +14,7 @@ Specifically, @Data generates for your class:
 @EqualsAndHashCode → generates equals() and hashCode() methods.
 @RequiredArgsConstructor → generates a constructor for final fields and fields marked with @NonNull.
 */
-//@AllArgsConstructor //creates a constructor will all property args
+@AllArgsConstructor //creates a constructor will all property args
 @Component //convert to class to bean
 public class Product {
 
@@ -27,33 +27,34 @@ public class Product {
 
     }
 
-    public Product(int prodId, String prodName, double prodPrice) {
-        this.prodId = prodId;
-        this.prodName = prodName;
-        this.prodPrice = prodPrice;
-    }
 
-    public int getProdId() {
-        return prodId;
-    }
-
-    public void setProdId(int prodId) {
-        this.prodId = prodId;
-    }
-
-    public String getProdName() {
-        return prodName;
-    }
-
-    public void setProdName(String prodName) {
-        this.prodName = prodName;
-    }
-
-    public double getProdPrice() {
-        return prodPrice;
-    }
-
-    public void setProdPrice(double prodPrice) {
-        this.prodPrice = prodPrice;
-    }
+//    public Product(int prodId, String prodName, double prodPrice) {
+//        this.prodId = prodId;
+//        this.prodName = prodName;
+//        this.prodPrice = prodPrice;
+//    }
+//
+//    public int getProdId() {
+//        return prodId;
+//    }
+//
+//    public void setProdId(int prodId) {
+//        this.prodId = prodId;
+//    }
+//
+//    public String getProdName() {
+//        return prodName;
+//    }
+//
+//    public void setProdName(String prodName) {
+//        this.prodName = prodName;
+//    }
+//
+//    public double getProdPrice() {
+//        return prodPrice;
+//    }
+//
+//    public void setProdPrice(double prodPrice) {
+//        this.prodPrice = prodPrice;
+//    }
 }
