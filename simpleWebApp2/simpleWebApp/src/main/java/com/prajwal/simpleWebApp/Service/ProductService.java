@@ -23,6 +23,7 @@ public class ProductService {
 
     public Product getProductById(int prodId) {
         //streamapi used for find by prodId or we can use a normal for loop.
-        return products.stream().filter(p -> p.getProdId() == prodId).findFirst().get();
+        //return products.stream().filter(p -> p.getProdId() == prodId).findFirst().get();
+        return products.stream().filter(p -> p.getProdId() == prodId).findFirst().orElse(new Product(100,"no item",0.00)) ; //orElse for anyId eg(105)that doesnt exist in list will send dummy value or data
     }
 }
