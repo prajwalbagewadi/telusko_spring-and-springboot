@@ -34,9 +34,9 @@ public class Product {
 //        this.prodPrice = prodPrice;
 //    }
 //
-//    public int getProdId() {
-//        return prodId;
-//    }
+    public int getProdId() {
+        return prodId;
+    }
 //
 //    public void setProdId(int prodId) {
 //        this.prodId = prodId;

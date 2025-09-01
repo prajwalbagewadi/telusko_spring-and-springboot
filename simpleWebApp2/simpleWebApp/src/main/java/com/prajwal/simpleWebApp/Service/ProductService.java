@@ -17,6 +17,12 @@ public class ProductService {
     );
 
     public List<Product> getProducts(){
+
         return products;
+    }
+
+    public Product getProductById(int prodId) {
+        //streamapi used for find by prodId or we can use a normal for loop.
+        return products.stream().filter(p -> p.getProdId() == prodId).findFirst().get();
     }
 }
