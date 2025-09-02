@@ -57,4 +57,14 @@ public class Product {
 //    public void setProdPrice(double prodPrice) {
 //        this.prodPrice = prodPrice;
 //    }
+
+    //to view object from hashcode to human readable format.
+    @Override
+    public String toString() {
+        return "Product{" +
+                "prodId=" + prodId +
+                ", prodName='" + prodName + '\'' +
+                ", prodPrice=" + prodPrice +
+                '}';
+    }
 }
