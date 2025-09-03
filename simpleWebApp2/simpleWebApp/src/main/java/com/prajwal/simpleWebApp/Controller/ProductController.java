@@ -55,4 +55,16 @@ public class ProductController {
         boolean isupdated=service.updateProduct(prod);
         return "Product update successfully:"+isupdated;
     }
+
+    //delete
+//    @DeleteMapping("/products/{prodId}") //specialized delete method mapping annotation
+//    public void deleteProduct(@PathVariable int prodId){
+//        service.deleteProduct(prodId);
+//    }
+
+    @DeleteMapping("/products/{prodId}") //specialized delete method mapping annotation
+    public String deleteProduct(@PathVariable int prodId){
+        boolean isdeleted=service.deleteProduct(prodId);
+        return "Product update successfully:"+isdeleted;
+    }
 }

@@ -58,9 +58,26 @@ public class ProductService {
                 index=i;
             }
         }
-        //IndexOutofBoundsException if the indexs are exausted.
+        //IndexOutofBoundsException if the index's are exausted. return for successful or failure.
         try{
             products.set(index,prod);
+            return true;//success
+        }catch(IndexOutOfBoundsException e){
+            // Handle error, e.g., index is out of bounds
+            return false;//failure
+        }
+    }
+
+    public boolean deleteProduct(int prodId) {
+        int index=0;
+        for(int i=0;i<products.size();i++){
+            if(products.get(i).getProdId()==prodId){
+                index=i;
+            }
+        }
+        //IndexOutofBoundsException if the index's are exausted. return for successful or failure.
+        try{
+            products.remove(index);
             return true;//success
         }catch(IndexOutOfBoundsException e){
             // Handle error, e.g., index is out of bounds
