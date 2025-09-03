@@ -50,4 +50,22 @@ public class ProductService {
         boolean isadded=products.add(prod);
         return isadded;
     }
+
+    public boolean updateProduct(Product prod) {
+        int index=0;
+        for(int i=0;i<products.size();i++){
+            if(products.get(i).getProdId() == prod.getProdId()){
+                index=i;
+            }
+        }
+        //IndexOutofBoundsException if the indexs are exausted.
+        try{
+            products.set(index,prod);
+            return true;//success
+        }catch(IndexOutOfBoundsException e){
+            // Handle error, e.g., index is out of bounds
+            return false;//failure
+        }
+
+    }
 }
