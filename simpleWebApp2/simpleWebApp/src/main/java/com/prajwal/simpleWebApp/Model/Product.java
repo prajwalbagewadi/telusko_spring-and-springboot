@@ -1,5 +1,7 @@
 package com.prajwal.simpleWebApp.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.stereotype.Component;
@@ -16,8 +18,10 @@ Specifically, @Data generates for your class:
 */
 @AllArgsConstructor //creates a constructor will all property args
 @Component //convert to class to bean
+@Entity // for the class whos table you want to create
 public class Product {
 
+    @Id //denotes the primary key of the table
     private int prodId;
     private String prodName;
     private double prodPrice;

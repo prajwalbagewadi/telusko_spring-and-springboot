@@ -39,8 +39,9 @@ public class ProductController {
     //Error:prod=Product(prodId=0, prodName=null, prodPrice=0.0) data not getting received to server
     //sol : @RequestBody to match send Body(data) to argument prod.
     public String addProduct(@RequestBody Product prod){
-        boolean isadded=service.addProduct(prod);
-        return "Product added successfully:"+isadded;
+        //boolean isadded=service.addProduct(prod);
+        service.addProduct(prod);
+        return "Product added successfully.";//+isadded;
     }
 
     //update
@@ -52,8 +53,9 @@ public class ProductController {
     //update
     @PutMapping("/products") //specialized put method mapping annotation
     public String updateProduct(@RequestBody Product prod){
-        boolean isupdated=service.updateProduct(prod);
-        return "Product update successfully:"+isupdated;
+        //boolean isupdated=service.updateProduct(prod);
+        service.updateProduct(prod);
+        return "Product update successfully:";//+isupdated;
     }
 
     //delete
@@ -64,7 +66,8 @@ public class ProductController {
 
     @DeleteMapping("/products/{prodId}") //specialized delete method mapping annotation
     public String deleteProduct(@PathVariable int prodId){
-        boolean isdeleted=service.deleteProduct(prodId);
-        return "Product update successfully:"+isdeleted;
+        //boolean isdeleted=service.deleteProduct(prodId);
+        service.deleteProduct(prodId);
+        return "Product deleted successfully:";//+isdeleted;
     }
 }
